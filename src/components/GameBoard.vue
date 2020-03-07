@@ -188,7 +188,7 @@ export default {
 .game-board {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   .game-cell {
     box-sizing: border-box;
     width: 16%;
