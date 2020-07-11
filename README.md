@@ -3,6 +3,9 @@
 ## demo
 https://toyo-toyo.github.io/vue-othello/
 
+## TypeScript+CompositionAPI
+https://github.com/toyo-toyo/vue-othello-ts
+
 ## Project setup
 ```
 npm install

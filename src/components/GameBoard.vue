@@ -1,5 +1,5 @@
 <template>
-  <div class="game-board">
+  <div class="game-board" :style="{ width: windoWidth }">
     <template v-for="(v, x) in cells">
       <game-cell
         class="game-cell"
@@ -7,6 +7,9 @@
         :key="`${x}_${y}`"
         :owner="cell.owner"
         :put="cell.put"
+        :style="{
+          width: 98 / BOARD_SIZE + '%'
+        }"
         @click="placeStone(x, y)"
       />
     </template>
@@ -58,7 +61,9 @@ export default {
     cells[ini2][ini2].owner = P2;
     return {
       cells: cells,
-      turn: P1
+      turn: P1,
+      BOARD_SIZE,
+      windoWidth: ((window.innerWidth < window.innerHeight) ? window.innerWidth : window.innerHeight* 0.95) + 'px'
     };
   },
   computed: {
